@@ -404,7 +404,7 @@
         </div>
         <!-- รูปที่ 9 (เพิ่มใหม่) -->
         <div class="group relative aspect-square overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900">
-            <img src="assets/images/YOUR_IMAGE_9.jpg" alt="บรรยากาศร้าน 9" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="assets/images/IMG_7685.PNG" alt="บรรยากาศร้าน 9" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
         </div>
     </div>
 </div>
@@ -718,7 +718,38 @@
                 </form>
             </div>
         </section>
+<script>
+function sendToLine() {
+    // ดึงข้อมูลจาก id ในหน้าเว็บของคุณ
+    const fullname = document.getElementById('name')?.value;
+    const phone = document.getElementById('phone')?.value;
+    const date = document.getElementById('date')?.value;
+    const position = document.getElementById('bodyPart')?.value;
+    const details = document.getElementById('detail')?.value || 'ไม่มีข้อมูลเพิ่มเติม';
 
+    // ตรวจสอบข้อมูลที่จำเป็น
+    if (!fullname || !phone || !date || !position) {
+        alert('กรุณากรอกข้อมูลที่มีเครื่องหมาย * ให้ครบถ้วน');
+        return;
+    }
+
+    // จัดข้อความส่งเข้า LINE
+    const message = `📌 *รายละเอียดการจองคิวสัก (71's Atelier)*\n` +
+                    `--------------------------------\n` +
+                    `👤 *ชื่อ-นามสกุล/ชื่อเล่น:* ${fullname}\n` +
+                    `📞 *เบอร์โทรศัพท์:* ${phone}\n` +
+                    `📅 *วันที่ต้องการเข้าสัก:* ${date}\n` +
+                    `📍 *ตำแหน่งบนร่างกาย:* ${position}\n` +
+                    `📝 *รายละเอียด/Ref:* ${details}\n` +
+                    `--------------------------------\n` +
+                    `ส่งข้อมูลจากเว็บไซต์ 71's Atelier Tattoo`;
+
+    const lineUrl = "https://line.me/ti/p/~pjr.9977";
+    window.open(lineUrl, '_blank');
+   const lineUrl = "https://line.me/ti/p/gWiYcwguby";
+    window.open(lineUrl, '_blank');
+}
+</script>
         <!-- 5. CONTACT SECTION -->
 <section id="page-contact" class="page-section hidden py-12 px-4 max-w-5xl mx-auto w-full">
     <div class="text-center mb-10">
