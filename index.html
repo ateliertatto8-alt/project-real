@@ -375,70 +375,93 @@
         </section>
 
         <!-- 5. CONTACT SECTION -->
-        <section id="page-contact" class="page-section max-w-5xl mx-auto px-4 py-12">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-extrabold text-zinc-100">ช่องทางการติดต่อ</h2>
-                <p class="text-zinc-400 text-sm mt-1">สอบถามราคา ปรึกษาแบบลายสัก หรือขอเส้นทางมาสตูดิโอ</p>
+<section id="page-contact" class="page-section hidden py-12 px-4 max-w-5xl mx-auto w-full">
+    <div class="text-center mb-10">
+        <h2 class="text-3xl font-extrabold text-zinc-100">ช่องทางการติดต่อ</h2>
+        <p class="text-zinc-400 text-sm mt-1">สอบถามราคา ปรึกษาแบบลายสัก หรือขอเส้นทางมาสตูดิโอ</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- รายการช่องทางติดต่อ -->
+        <div class="space-y-4">
+            
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/people/71s-Atelier-Tattoo/61564376957038/" target="_blank" 
+               class="flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800/80 hover:border-amber-500/50 transition group">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-500 flex items-center justify-center shrink-0 group-hover:scale-105 transition">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <span class="text-xs text-zinc-400 font-medium leading-none mb-1">Facebook Page</span>
+                    <span class="text-zinc-100 font-semibold text-base leading-tight">71's Atelier Tattoo</span>
+                </div>
+            </a>
+
+            <!-- LINE -->
+            <a href="https://line.me/R/ti/p/@71satelier" target="_blank" 
+               class="flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800/80 hover:border-amber-500/50 transition group">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.412-.105-.53-.284l-2.03-2.909v2.535c0 .345-.282.63-.63.63-.345 0-.627-.285-.627-.63V8.108c0-.27.174-.51.432-.596.064-.021.132-.031.2-.031.21 0 .41.105.528.285l2.031 2.908V8.108c0-.345.282-.63.63-.63.345 0 .627.285.627.63v4.771zm-5.741 0c0 .345-.282.63-.63.63-.345 0-.627-.285-.627-.63V8.108c0-.345.282-.63.63-.63.345 0 .627.285.627.63v4.771zm-2.43 0c0 .345-.282.63-.627.63H4.326c-.345 0-.627-.285-.627-.63V8.108c0-.345.282-.63.627-.63.345 0 .627.285.627.63v4.141h1.756c.346 0 .627.285.627.63zM24 10.314c0-4.797-4.908-8.698-10.94-8.698C7.027 1.616 2 5.517 2 10.314c0 4.298 3.897 7.893 9.152 8.563.357.077.843.236.966.54.11.272.072.701.036 1.002-.061.503-.277 1.968-.311 2.389-.052.628.288.618.604.409 3.125-2.067 8.463-4.985 8.463-8.601-.001-.101.001-.202 0-.302z"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <span class="text-xs text-zinc-400 font-medium leading-none mb-1">LINE Official Account</span>
+                    <span class="text-zinc-100 font-semibold text-base leading-tight">@71satelier</span>
+                </div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/71s.atelier" target="_blank" 
+               class="flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800/80 hover:border-amber-500/50 transition group">
+                <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <span class="text-xs text-zinc-400 font-medium leading-none mb-1">Instagram</span>
+                    <span class="text-zinc-100 font-semibold text-base leading-tight">@71s.atelier</span>
+                </div>
+            </a>
+
+            <!-- Location -->
+            <div class="flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800/80">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-500 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <span class="text-xs text-zinc-400 font-medium leading-none mb-1">ที่ตั้งสตูดิโอ</span>
+                    <span class="text-zinc-100 font-semibold text-base leading-tight">คลองหก ปทุมธานี (ใกล้ มทร.ธัญบุรี)</span>
+                </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Social Links -->
-                <div class="space-y-4">
-                    <a href="https://www.facebook.com/people/71s-Atelier-Tattoo/61564376957038/" target="_blank" class="flex items-center gap-4 bg-zinc-900/80 border border-zinc-800 p-4 rounded-xl hover:border-amber-500 transition group">
-                        <div class="bg-blue-600/10 border border-blue-500/20 p-3 rounded-xl text-blue-500 group-hover:scale-110 transition">
-                            <i data-lucide="facebook" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-zinc-400">Facebook Page</p>
-                            <p class="font-bold text-zinc-100">71's Atelier Tattoo</p>
-                        </div>
-                    </a>
+        </div>
 
-                    <a href="https://line.me/ti/p/gWiYcwguby" target="_blank" class="flex items-center gap-4 bg-zinc-900/80 border border-zinc-800 p-4 rounded-xl hover:border-amber-500 transition group">
-                        <div class="bg-emerald-600/10 border border-emerald-500/20 p-3 rounded-xl text-emerald-500 group-hover:scale-110 transition">
-                            <i data-lucide="message-circle" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-zinc-400">LINE Official Account</p>
-                            <p class="font-bold text-zinc-100">@71satelier</p>
-                        </div>
-                    </a>
-
-                    <a href="https://www.instagram.com/71s.atelier?igsi=b2pkdmdiaTJhbGI4" target="_blank" class="flex items-center gap-4 bg-zinc-900/80 border border-zinc-800 p-4 rounded-xl hover:border-amber-500 transition group">
-                        <div class="bg-pink-600/10 border border-pink-500/20 p-3 rounded-xl text-pink-500 group-hover:scale-110 transition">
-                            <i data-lucide="instagram" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-zinc-400">Instagram</p>
-                            <p class="font-bold text-zinc-100">@71s.atelier</p>
-                        </div>
-                    </a>
-
-                    <div class="flex items-center gap-4 bg-zinc-900/80 border border-zinc-800 p-4 rounded-xl">
-                        <div class="bg-amber-500/10 border border-amber-500/20 p-3 rounded-xl text-amber-500">
-                            <i data-lucide="map-pin" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-zinc-400">ที่ตั้งสตูดิโอ</p>
-                            <p class="font-bold text-zinc-100">คลองหก ปทุมธานี (ใกล้ มทร.ธัญบุรี)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Google Maps Embed -->
-                <div class="bg-zinc-900/80 border border-zinc-800 p-4 rounded-xl flex flex-col h-full min-h-[280px]">
-                    <div class="mb-3">
-                        <h3 class="font-bold text-zinc-100 text-sm">แผนที่การเดินทาง</h3>
-                        <p class="text-xs text-zinc-400">มทร.ธัญบุรี คลองหก ปทุมธานี</p>
-                    </div>
-                    <div class="flex-1 w-full rounded-lg overflow-hidden border border-zinc-800">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.334710173669!2d100.7258413!3d14.0275816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d84877bc95ab3%3A0xa13ad5db2b535d57!2sRajamangala%20University%20of%20Technology%20Thanyaburi!5e0!3m2!1sen!2sth!4v1710000000000!5m2!1sen!2sth" class="w-full h-full border-0 min-h-[220px]" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
+        <!-- แผนที่ Google Maps -->
+        <div class="p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800/80 flex flex-col">
+            <div class="mb-3">
+                <h3 class="text-sm font-semibold text-zinc-200">แผนที่การเดินทาง</h3>
+                <p class="text-xs text-zinc-400">มทร.ธัญบุรี คลองหก ปทุมธานี</p>
             </div>
-        </section>
-
-    </main>
+            <div class="w-full h-64 md:h-full rounded-xl overflow-hidden border border-zinc-800/60 min-h-[220px]">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15485.459461141123!2d100.7208883!3d14.0371457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d830a618e7d21%3A0xb30cfbb949d28db7!2z4Lih4Lir4Liy4LiC4LmJ4Liy4LiB4Liy4Lij4LmA4LiX4LiE4LmC4LiZ4LmC4LiX4Lij4Li04Lih4Liy4LmE4LiX4LiiIOC4hOC4Lil4Lit4LiH4Lir4LiB!5e0!3m2!1sth!2sth!4v1700000000000!5m2!1sth!2sth" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-zinc-950 border-t border-zinc-900 py-6 text-center text-xs text-zinc-500">
