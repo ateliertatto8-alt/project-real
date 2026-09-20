@@ -731,15 +731,13 @@
             </div>
         </section>
 <script>
-function sendToLine() {
-    function sendToLine() {
-    // ดึงข้อมูลจาก id ในหน้าเว็บของคุณ (เปลี่ยนจาก bodyPart เป็น timeSlot)
+ffunction sendToLine() {
+    // ดึงข้อมูลจาก id ในหน้าเว็บของคุณ
     const fullname = document.getElementById('name')?.value;
     const phone = document.getElementById('phone')?.value;
     const date = document.getElementById('date')?.value;
     const timeSlot = document.getElementById('timeSlot')?.value;
     const details = document.getElementById('detail')?.value || 'ไม่มีข้อมูลเพิ่มเติม';
-
     // ตรวจสอบข้อมูลที่จำเป็น (เช็คช่องเวลานัดแทนตำแหน่งร่างกาย)
     if (!fullname || !phone || !date || !timeSlot) {
         alert('กรุณากรอกข้อมูลที่มีเครื่องหมาย * ให้ครบถ้วน');
