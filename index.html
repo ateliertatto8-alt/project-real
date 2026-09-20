@@ -660,27 +660,26 @@
                 <!-- Interactive Form -->
                 <form id="bookingForm" class="md:col-span-5 bg-zinc-900/80 border border-zinc-800 p-6 md:p-8 rounded-2xl space-y-6">
                     
-                    <!-- รายละเอียดลายสัก -->
-                    <div class="bg-zinc-950/80 border border-zinc-800/80 p-5 rounded-xl space-y-4">
-                        <div class="flex items-center gap-2 text-amber-500 font-bold text-sm">
-                            <i data-lucide="pen-tool" class="w-4 h-4"></i> รายละเอียดลายสัก
-                        </div>
-                        <div class="grid sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-medium text-zinc-400 mb-1">สไตล์งานสัก</label>
-                                <select id="styleSelect" class="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-sm text-zinc-200 focus:outline-none focus:border-amber-500">
-                                    <option value="minimal">Minimal / Fine Line (งานเส้นบาง)</option>
-                                    <option value="font">Font / ตัวหนังสือ</option>
-                                    <option value="custom">Custom Design / ออกแบบใหม่</option>
-                                    <option value="color">งานสี / Color Tattoo</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-medium text-zinc-400 mb-1">ขนาดโดยประมาณ (เซนติเมตร)</label>
-                                <input type="number" id="sizeInput" min="2" max="50" value="5" class="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-sm text-zinc-200 focus:outline-none focus:border-amber-500" placeholder="เช่น 5 ซม.">
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Step 1: รายละเอียดลายสัก -->
+<div class="grid sm:grid-cols-2 gap-4 mb-4">
+    <div>
+        <label class="block text-xs font-medium text-zinc-300 mb-1">สไตล์งานสัก</label>
+        <!-- แก้ไข select ตรงนี้ให้เป็นพื้นหลังสีขาว -->
+        <select id="tattooStyle" class="w-full bg-white border border-zinc-300 rounded-lg px-4 py-2.5 text-sm text-zinc-900 focus:outline-none focus:ring-2 focus:ring-amber-500">
+            <option>Minimal / Fine Line (งานเส้นบาง)</option>
+            <option>Traditional / Old School</option>
+            <option>Realism (งานเหมือนจริง)</option>
+            <option>Blackwork / Geometric</option>
+            <option>Japanese / Irezumi</option>
+            <option>Lettering (งานตัวหนังสือ)</option>
+        </select>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-zinc-300 mb-1">ขนาดโดยประมาณ (เซนติเมตร)</label>
+        <!-- แก้ไข input ตรงนี้ให้เป็นพื้นหลังสีขาว -->
+        <input type="number" id="tattooSize" class="w-full bg-white border border-zinc-300 rounded-lg px-4 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="เช่น 10">
+    </div>
+</div>
                     <!-- Step 2: ข้อมูลผู้จอง -->
                     <!-- Step 2: กรอกข้อมูลจองคิว -->
 <div class="space-y-4">
@@ -732,29 +731,36 @@
         </section>
 <script>
 function sendToLine() {
-    // ดึงข้อมูลจาก id ในหน้าเว็บของคุณ
+    function sendToLine() {
+    // ดึงข้อมูลจาก id ในหน้าเว็บของคุณ (เปลี่ยนจาก bodyPart เป็น timeSlot)
     const fullname = document.getElementById('name')?.value;
     const phone = document.getElementById('phone')?.value;
     const date = document.getElementById('date')?.value;
-    const position = document.getElementById('bodyPart')?.value;
+    const timeSlot = document.getElementById('timeSlot')?.value;
     const details = document.getElementById('detail')?.value || 'ไม่มีข้อมูลเพิ่มเติม';
 
-    // ตรวจสอบข้อมูลที่จำเป็น
-    if (!fullname || !phone || !date || !position) {
+    // ตรวจสอบข้อมูลที่จำเป็น (เช็คช่องเวลานัดแทนตำแหน่งร่างกาย)
+    if (!fullname || !phone || !date || !timeSlot) {
         alert('กรุณากรอกข้อมูลที่มีเครื่องหมาย * ให้ครบถ้วน');
         return;
     }
 
-    // จัดข้อความส่งเข้า LINE
+    // จัดข้อความส่งเข้า LINE (เพิ่มบรรทัดเวลานัดคิว)
     const message = `📌 *รายละเอียดการจองคิวสัก (71's Atelier)*\n` +
                     `--------------------------------\n` +
                     `👤 *ชื่อ-นามสกุล/ชื่อเล่น:* ${fullname}\n` +
                     `📞 *เบอร์โทรศัพท์:* ${phone}\n` +
                     `📅 *วันที่ต้องการเข้าสัก:* ${date}\n` +
-                    `📍 *ตำแหน่งบนร่างกาย:* ${position}\n` +
+                    `⏰ *เวลานัดคิว:* ${timeSlot}\n` +
                     `📝 *รายละเอียด/Ref:* ${details}\n` +
                     `--------------------------------\n` +
                     `ส่งข้อมูลจากเว็บไซต์ 71's Atelier Tattoo`;
+
+    // 1. ลิงก์แบบส่งข้อความเข้า LINE ID พร้อมข้อมูลจองคิว
+    const lineUrl = `https://line.me/R/oaMessage/~pjr.9977/?${encodeURIComponent(message)}`;
+
+    window.open(lineUrl, '_blank');
+}
 
     // 1. ลิงก์แบบส่งข้อความเข้า LINE ID พร้อมข้อมูลจองคิว (แนะนำให้ใช้ตัวนี้ เพราะลูกค้ากดส่งข้อมูลหาเราได้ทันที)
     const lineUrl = `https://line.me/R/oaMessage/~pjr.9977/?${encodeURIComponent(message)}`;
