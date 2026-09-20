@@ -134,6 +134,130 @@
                     <p class="text-xs text-zinc-400 leading-relaxed">เน้นงานเส้นคม ชัด บางเบา รอยแผลหายไว ดูแลให้คำแนะนำทั้งก่อนและหลังการสักอย่างใกล้ชิด</p>
                 </div>
             </div>
+            <!-- ========================================================= -->
+    <!-- โซนความประทับใจจากลูกค้า + ฟอร์มคอมเมนต์ (นำไปวางไว้ใน page-home) -->
+    <!-- ========================================================= -->
+    <div class="space-y-8 pt-8 border-t border-zinc-800/60 mt-12">
+        <!-- หัวข้อส่วนรีวิว -->
+        <div class="text-center space-y-2">
+            <h2 class="text-2xl sm:text-3xl font-black text-zinc-100 tracking-tight">ความประทับใจจากลูกค้า</h2>
+            <p class="text-xs sm:text-sm text-amber-500 font-medium">ส่วนหนึ่งของรีวิวจากผู้รับบริการจริง</p>
+        </div>
+
+        <!-- ฟอร์มสำหรับพิมพ์คอมเมนต์เพิ่ม -->
+        <div class="bg-zinc-900/90 border border-zinc-800 rounded-2xl p-5 max-w-xl mx-auto space-y-4 shadow-lg">
+            <h3 class="text-sm font-bold text-zinc-200 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span> เขียนรีวิว / แสดงความคิดเห็น
+            </h3>
+            
+            <form id="commentForm" onsubmit="addComment(event)" class="space-y-3">
+                <div>
+                    <input type="text" id="commenterName" placeholder="ชื่อของคุณ (เช่น คุณเอ, Customer)" required 
+                        class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-2.5 text-xs text-zinc-200 focus:outline-none focus:border-amber-500 transition">
+                </div>
+                <div>
+                    <textarea id="commentText" rows="3" placeholder="แบ่งปันความประทับใจจากการใช้บริการ..." required 
+                        class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-2.5 text-xs text-zinc-200 focus:outline-none focus:border-amber-500 transition resize-none"></textarea>
+                </div>
+                <button type="submit" 
+                    class="w-full bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold py-2.5 rounded-xl text-xs transition shadow-md shadow-amber-500/10 cursor-pointer">
+                    ส่งความคิดเห็น
+                </button>
+            </form>
+        </div>
+
+        <!-- รายการการ์ดรีวิว -->
+        <div id="reviewsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- รีวิวเดิม 1 -->
+            <div class="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-6 space-y-4 hover:border-zinc-700 transition flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-1 text-amber-400 text-sm">★ ★ ★ ★ ★</div>
+                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
+                        "ช่างมือเบามาก งานเส้นบางคมกริบตรงตาม Ref ที่ส่งให้ ร้านสะอาด เป็นส่วนตัวมากครับ"
+                    </p>
+                </div>
+                <span class="text-[11px] text-zinc-500 font-medium">โดย คุณลูกค้า</span>
+            </div>
+
+            <!-- รีวิวเดิม 2 -->
+            <div class="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-6 space-y-4 hover:border-zinc-700 transition flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-1 text-amber-400 text-sm">★ ★ ★ ★ ★</div>
+                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
+                        "สักครั้งแรกแอบกลัวเจ็บ แต่ช่างให้คำปรึกษาดีมาก ใจเย็น แผลแห้งไวมากค่ะ เลิฟเลย!"
+                    </p>
+                </div>
+                <span class="text-[11px] text-zinc-500 font-medium">โดย คุณลูกค้า</span>
+            </div>
+
+            <!-- รีวิวเดิม 3 -->
+            <div class="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-6 space-y-4 hover:border-zinc-700 transition flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-1 text-amber-400 text-sm">★ ★ ★ ★ ★</div>
+                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
+                        "ออกแบบ Custom ออกมาได้ถูกใจมากครับ แก้แบบให้จนกว่าจะชอบแนะนำเลยครับร้านนี้"
+                    </p>
+                </div>
+                <span class="text-[11px] text-zinc-500 font-medium">โดย คุณลูกค้า</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script ควบคุมระบบเพิ่มและจำคอมเมนต์ -->
+    <script>
+        function addComment(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById('commenterName');
+            const textInput = document.getElementById('commentText');
+
+            const name = nameInput.value.trim();
+            const text = textInput.value.trim();
+
+            if (!name || !text) return;
+
+            const newReview = { name, text };
+            const savedReviews = JSON.parse(localStorage.getItem('user_reviews') || '[]');
+            savedReviews.unshift(newReview);
+            localStorage.setItem('user_reviews', JSON.stringify(savedReviews));
+
+            renderReviewCard(newReview, true);
+
+            nameInput.value = '';
+            textInput.value = '';
+        }
+
+        function renderReviewCard(review, isNew = false) {
+            const grid = document.getElementById('reviewsGrid');
+            if (!grid) return;
+            
+            const card = document.createElement('div');
+            card.className = "bg-zinc-900/80 border border-amber-500/40 rounded-2xl p-6 space-y-4 hover:border-amber-500 transition flex flex-col justify-between";
+            
+            card.innerHTML = `
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-1 text-amber-400 text-sm">★ ★ ★ ★ ★</div>
+                        ${isNew ? '<span class="text-[10px] bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded-full font-semibold">ใหม่ล่าสุด</span>' : ''}
+                    </div>
+                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">"${escapeHtml(review.text)}"</p>
+                </div>
+                <span class="text-[11px] text-amber-400/90 font-medium">โดย ${escapeHtml(review.name)}</span>
+            `;
+
+            grid.prepend(card);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedReviews = JSON.parse(localStorage.getItem('user_reviews') || '[]');
+            savedReviews.reverse().forEach(review => renderReviewCard(review));
+        });
+
+        function escapeHtml(text) {
+            return text.replace(/[&<>"']/g, function(m) {
+                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+            });
+        }
+    </script>
         </section>
 
        <!-- 2. ABOUT SECTION -->
