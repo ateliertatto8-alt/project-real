@@ -692,11 +692,13 @@
     <div class="grid sm:grid-cols-2 gap-4">
         <div>
             <label class="block text-xs font-medium text-zinc-300 mb-1">ชื่อ - นามสกุล / ชื่อเล่น *</label>
-            <input type="text" id="name" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm text-zinc-100 focus:outline-none focus:border-amber-500" placeholder="เช่น กาย">
+            <!-- แก้ไข input ตรงนี้ -->
+            <input type="text" id="name" required class="w-full bg-white border border-zinc-300 rounded-lg px-4 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="เช่น กาย">
         </div>
         <div>
             <label class="block text-xs font-medium text-zinc-300 mb-1">เบอร์โทรศัพท์ *</label>
-            <input type="tel" id="phone" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm text-zinc-100 focus:outline-none focus:border-amber-500" placeholder="08X-XXX-XXXX">
+            <!-- แก้ไข input ตรงนี้ -->
+            <input type="tel" id="phone" required class="w-full bg-white border border-zinc-300 rounded-lg px-4 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="08X-XXX-XXXX">
         </div>
     </div>
 
@@ -704,17 +706,22 @@
     <div class="grid sm:grid-cols-2 gap-4">
         <div>
             <label class="block text-xs font-medium text-zinc-300 mb-1">วันที่ต้องการเข้าสัก *</label>
-            <input type="date" id="date" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm text-zinc-100 focus:outline-none focus:border-amber-500">
+            <!-- แก้ไข input ตรงนี้ -->
+            <input type="date" id="date" required class="w-full bg-white border border-zinc-300 rounded-lg px-4 py-2.5 text-sm text-zinc-900 focus:outline-none focus:ring-2 focus:ring-amber-500">
         </div>
         <div>
             <label class="block text-xs font-medium text-zinc-300 mb-1">เวลานัดคิว *</label>
-            <input type="text" id="timeSlot" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm text-zinc-100 focus:outline-none focus:border-amber-500" placeholder="เช่น 13:00 น.">
+            <!-- แก้ไข input ตรงนี้ -->
+            <input type="text" id="timeSlot" required class="w-full bg-white border border-zinc-300 rounded-lg px-4 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="เช่น 13:00 น.">
         </div>
     </div>
-                            <label class="block text-xs font-medium text-zinc-300 mb-1">รายละเอียดลายสัก / แนบลิงก์รูปตัวอย่าง Ref</label>
-                            <textarea id="detail" rows="3" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm text-zinc-100 focus:outline-none focus:border-amber-500" placeholder="อธิบายลายที่ต้องการ หรือวางลิงก์รูป Ref ตัวอย่าง"></textarea>
-                        </div>
-                    </div>
+
+    <!-- แถวที่ 3: รายละเอียดลายสัก -->
+    <div>
+        <label class="block text-xs font-medium text-zinc-300 mb-1">รายละเอียดลายสัก / แนบลิงก์รูปตัวอย่าง Ref</label>
+        <!-- แก้ไข textarea ตรงนี้ -->
+        <textarea id="detail" rows="3" class="w-full bg-white border border-zinc-300 rounded-lg px-4 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="อธิบายลายที่ต้องการ หรือวางลิงก์รูป Ref ตัวอย่าง"></textarea>
+    </div>
 
                     
                      <button type="button" onclick="sendToLine()" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-zinc-950 font-bold py-3.5 rounded-xl transition shadow-lg shadow-amber-500/10 flex items-center justify-center gap-2">
