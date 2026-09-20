@@ -104,189 +104,206 @@
                 </div>
             </div>
 
-            <!-- Features Highlights -->
-            <!-- Features Highlights -->
-            <div class="max-w-6xl mx-auto px-4 py-16 grid sm:grid-cols-3 gap-6">
-                <!-- หัวข้อที่ 1: สะอาด ปลอดภัย 100% -->
-                <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 rounded-2xl space-y-4 flex flex-col items-start">
-                    <div class="w-full h-48 rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950">
-                        <img src="assets/images/IMG_7343.JPG" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="text-lg font-bold text-zinc-100">สะอาด ปลอดภัย 100%</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">แกะเข็มใหม่ต่อหน้า อุปกรณ์ผ่านการฆ่าเชื้อโรคระดับมาตรฐาน เปลี่ยนวัสดุสิ้นเปลืองทุกเคส</p>
-                </div>
-
-                <!-- หัวข้อที่ 2: Custom Design เฉพาะคุณ -->
-                <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 rounded-2xl space-y-4 flex flex-col items-start">
-                    <div class="w-full h-48 rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950">
-                        <img src="assets/images/IMG_7347.JPG" alt="Custom Design เฉพาะคุณ" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="text-lg font-bold text-zinc-100">Custom Design เฉพาะคุณ</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">รับวางแบบ ออกแบบใหม่ตามความต้องการ คุยรายละเอียดและปรับแต่งจนกว่าจะพอใจก่อนสักจริง</p>
-                </div>
-
-                <!-- หัวข้อที่ 3: ช่างมือเบา ประณีต -->
-                <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 rounded-2xl space-y-4 flex flex-col items-start">
-                    <div class="w-full h-48 rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950">
-                        <img src="assets/images/IMG_7346.JPG" alt="ช่างมือเบา ประณีต" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="text-lg font-bold text-zinc-100">ช่างมือเบา ประณีต</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">เน้นงานเส้นคม ชัด บางเบา รอยแผลหายไว ดูแลให้คำแนะนำทั้งก่อนและหลังการสักอย่างใกล้ชิด</p>
-                </div>
+            <!-- Features Highlights (5 Cards) -->
+    <div class="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        
+        <!-- หัวข้อที่ 1: สะอาด ปลอดภัย 100% -->
+        <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 rounded-2xl space-y-4 flex flex-col items-start">
+            <div class="w-full h-48 rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950">
+                <img src="assets/images/IMG_7343.JPG" alt="สะอาด ปลอดภัย 100%" class="w-full h-full object-cover hover:scale-105 transition duration-500">
             </div>
-            <!-- ========================================================= -->
-    <!-- โซนความประทับใจจากลูกค้า + ฟอร์มคอมเมนต์ (นำไปวางไว้ใน page-home) -->
-    <!-- ========================================================= -->
-    <div class="space-y-8 pt-8 border-t border-zinc-800/60 mt-12">
-        <!-- หัวข้อส่วนรีวิว -->
-        <div class="text-center space-y-2">
-            <h2 class="text-2xl sm:text-3xl font-black text-zinc-100 tracking-tight">ความประทับใจจากลูกค้า</h2>
-            <p class="text-xs sm:text-sm text-amber-500 font-medium">ส่วนหนึ่งของรีวิวจากผู้รับบริการจริง</p>
+            <h3 class="text-lg font-bold text-zinc-100">สะอาด ปลอดภัย 100%</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">แกะเข็มใหม่ต่อหน้า อุปกรณ์ผ่านการฆ่าเชื้อโรคระดับมาตรฐาน เปลี่ยนวัสดุสิ้นเปลืองทุกเคส</p>
         </div>
 
-        <!-- ฟอร์มสำหรับพิมพ์คอมเมนต์เพิ่ม -->
-        <div class="bg-zinc-900/90 border border-zinc-800 rounded-2xl p-5 max-w-xl mx-auto space-y-4 shadow-lg">
-            <h3 class="text-sm font-bold text-zinc-200 flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-amber-500"></span> เขียนรีวิว / แสดงความคิดเห็น
-            </h3>
-            
-            <form id="commentForm" onsubmit="addComment(event)" class="space-y-3">
-                <div>
-                    <input type="text" id="commenterName" placeholder="ชื่อของคุณ (เช่น คุณเอ, Customer)" required 
-                        class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-2.5 text-xs text-zinc-200 focus:outline-none focus:border-amber-500 transition">
-                </div>
-                <div>
-                    <textarea id="commentText" rows="3" placeholder="แบ่งปันความประทับใจจากการใช้บริการ..." required 
-                        class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-2.5 text-xs text-zinc-200 focus:outline-none focus:border-amber-500 transition resize-none"></textarea>
-                </div>
-                <button type="submit" 
-                    class="w-full bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold py-2.5 rounded-xl text-xs transition shadow-md shadow-amber-500/10 cursor-pointer">
-                    ส่งความคิดเห็น
-                </button>
-            </form>
+        <!-- หัวข้อที่ 2: Custom Design เฉพาะคุณ -->
+        <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 rounded-2xl space-y-4 flex flex-col items-start">
+            <div class="w-full h-48 rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950">
+                <img src="assets/images/IMG_7347.JPG" alt="Custom Design เฉพาะคุณ" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <h3 class="text-lg font-bold text-zinc-100">Custom Design เฉพาะคุณ</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">รับวางแบบ ออกแบบใหม่ตามความต้องการ คุยรายละเอียดและปรับแต่งจนกว่าจะพอใจก่อนสักจริง</p>
         </div>
 
-        <!-- รายการการ์ดรีวิว -->
-        <div id="reviewsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <!-- รีวิวเดิม 1 -->
-            <div class="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-6 space-y-4 hover:border-zinc-700 transition flex flex-col justify-between">
-                <div class="space-y-3">
-                    <div class="flex items-center gap-1 text-amber-400 text-sm">★ ★ ★ ★ ★</div>
-                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
-                        "ช่างมือเบามาก งานเส้นบางคมกริบตรงตาม Ref ที่ส่งให้ ร้านสะอาด เป็นส่วนตัวมากครับ"
-                    </p>
-                </div>
-                <span class="text-[11px] text-zinc-500 font-medium">โดย คุณลูกค้า</span>
+        <!-- หัวข้อที่ 3: ช่างมือเบา ประณีต -->
+        <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 rounded-2xl space-y-4 flex flex-col items-start">
+            <div class="w-full h-48 rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950">
+                <img src="assets/images/IMG_7346.JPG" alt="ช่างมือเบา ประณีต" class="w-full h-full object-cover hover:scale-105 transition duration-500">
             </div>
-
-            <!-- รีวิวเดิม 2 -->
-            <div class="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-6 space-y-4 hover:border-zinc-700 transition flex flex-col justify-between">
-                <div class="space-y-3">
-                    <div class="flex items-center gap-1 text-amber-400 text-sm">★ ★ ★ ★ ★</div>
-                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
-                        "สักครั้งแรกแอบกลัวเจ็บ แต่ช่างให้คำปรึกษาดีมาก ใจเย็น แผลแห้งไวมากค่ะ เลิฟเลย!"
-                    </p>
-                </div>
-                <span class="text-[11px] text-zinc-500 font-medium">โดย คุณลูกค้า</span>
-            </div>
-
-            <!-- รีวิวเดิม 3 -->
-            <div class="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-6 space-y-4 hover:border-zinc-700 transition flex flex-col justify-between">
-                <div class="space-y-3">
-                    <div class="flex items-center gap-1 text-amber-400 text-sm">★ ★ ★ ★ ★</div>
-                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
-                        "ออกแบบ Custom ออกมาได้ถูกใจมากครับ แก้แบบให้จนกว่าจะชอบแนะนำเลยครับร้านนี้"
-                    </p>
-                </div>
-                <span class="text-[11px] text-zinc-500 font-medium">โดย คุณลูกค้า</span>
-            </div>
+            <h3 class="text-lg font-bold text-zinc-100">ช่างมือเบา ประณีต</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">เน้นงานเส้นคม ชัด บางเบา รอยแผลหายไว ดูแลให้คำแนะนำทั้งก่อนและหลังการสักอย่างใกล้ชิด</p>
         </div>
+
+        <!-- หัวข้อที่ 4: สีสักมาตรฐานนำเข้า (เพิ่มใหม่) -->
+        <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 rounded-2xl space-y-4 flex flex-col items-start">
+            <div class="w-full h-48 rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950">
+                <img src="assets/images/IMG_7344.JPG" alt="สีสักมาตรฐานนำเข้า" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <h3 class="text-lg font-bold text-zinc-100">สีสักมาตรฐานนำเข้า</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">ใช้สีสักแท้คุณภาพสูง สีสดติดชัด ปลอดภัยต่อผิวหนัง ลายสักสวยงามคงทนระยะยาว</p>
+        </div>
+
+        <!-- หัวข้อที่ 5: บรรยากาศเป็นกันเอง (เพิ่มใหม่) -->
+        <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 rounded-2xl space-y-4 flex flex-col items-start">
+            <div class="w-full h-48 rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950">
+                <img src="assets/images/IMG_7345.JPG" alt="บรรยากาศเป็นกันเอง" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <h3 class="text-lg font-bold text-zinc-100">บรรยากาศเป็นกันเอง</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">สตูดิโอสะอาด เป็นส่วนตัว ไม่วุ่นวาย มีที่จอดรถสะดวกสบาย ให้คุณผ่อนคลายตลอดการรับบริการ</p>
+        </div>
+
     </div>
 
-    <!-- Script ควบคุมระบบเพิ่มและจำคอมเมนต์ -->
-    <script>
-        function addComment(event) {
-            event.preventDefault();
-            const nameInput = document.getElementById('commenterName');
-            const textInput = document.getElementById('commentText');
+    <!-- 2. โซนความประทับใจจากลูกค้า + ฟอร์มคอมเมนต์ (พร้อมระบบแนบรูปภาพ) -->
+<div class="max-w-6xl mx-auto px-4 pb-16 space-y-8 border-t border-zinc-800/60 pt-12">
+    <!-- หัวข้อส่วนรีวิว -->
+    <div class="text-center space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-black text-zinc-100 tracking-tight">ความประทับใจจากลูกค้า</h2>
+        <p class="text-xs sm:text-sm text-amber-500 font-medium">ส่วนหนึ่งของรีวิวจากผู้รับบริการจริง</p>
+    </div>
 
-            const name = nameInput.value.trim();
-            const text = textInput.value.trim();
+    <!-- ฟอร์มสำหรับพิมพ์คอมเมนต์ และแนบรูป -->
+    <div class="bg-zinc-900/90 border border-zinc-800 rounded-2xl p-5 max-w-xl mx-auto space-y-4 shadow-lg">
+        <h3 class="text-sm font-bold text-zinc-200 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> เขียนรีวิว / แสดงความคิดเห็น
+        </h3>
+        
+        <form id="commentForm" onsubmit="addComment(event)" class="space-y-3">
+            <div>
+                <input type="text" id="commenterName" placeholder="ชื่อของคุณ (เช่น คุณเอ, Customer)" required 
+                    class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-2.5 text-xs text-zinc-200 focus:outline-none focus:border-amber-500 transition">
+            </div>
+            <div>
+                <textarea id="commentText" rows="3" placeholder="แบ่งปันความประทับใจจากการใช้บริการ..." required 
+                    class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-2.5 text-xs text-zinc-200 focus:outline-none focus:border-amber-500 transition resize-none"></textarea>
+            </div>
+            
+            <!-- ปุ่ม/ช่องแนบรูปภาพ -->
+            <div>
+                <label class="block text-xs text-zinc-400 mb-1">แนบรูปภาพผลงาน/รีวิว (ถ้ามี):</label>
+                <input type="file" id="commentImage" accept="image/*" 
+                    class="w-full text-xs text-zinc-400 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-zinc-800 file:text-amber-400 hover:file:bg-zinc-700 cursor-pointer border border-zinc-800/80 rounded-xl bg-zinc-950 p-1">
+            </div>
 
-            if (!name || !text) return;
+            <button type="submit" 
+                class="w-full bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold py-2.5 rounded-xl text-xs transition shadow-md cursor-pointer">
+                ส่งความคิดเห็น
+            </button>
+        </form>
+    </div>
 
-            const newReview = { name, text };
-            const savedReviews = JSON.parse(localStorage.getItem('user_reviews') || '[]');
-            savedReviews.unshift(newReview);
-            localStorage.setItem('user_reviews', JSON.stringify(savedReviews));
+    <!-- รายการการ์ดรีวิว -->
+    <div id="reviewsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <!-- รีวิวเดิม 1 -->
+        <div class="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+            <div class="space-y-3">
+                <div class="flex items-center gap-1 text-amber-400 text-sm">★ ★ ★ ★ ★</div>
+                <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">"ช่างมือเบามาก งานเส้นบางคมกริบตรงตาม Ref ที่ส่งให้ ร้านสะอาด เป็นส่วนตัวมากครับ"</p>
+            </div>
+            <span class="text-[11px] text-zinc-500 font-medium">โดย คุณลูกค้า</span>
+        </div>
 
-            renderReviewCard(newReview, true);
+        <!-- รีวิวเดิม 2 -->
+        <div class="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+            <div class="space-y-3">
+                <div class="flex items-center gap-1 text-amber-400 text-sm">★ ★ ★ ★ ★</div>
+                <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">"สักครั้งแรกแอบกลัวเจ็บ แต่ช่างให้คำปรึกษาดีมาก ใจเย็น แผลแห้งไวมากค่ะ เลิฟเลย!"</p>
+            </div>
+            <span class="text-[11px] text-zinc-500 font-medium">โดย คุณลูกค้า</span>
+        </div>
 
-            nameInput.value = '';
-            textInput.value = '';
+        <!-- รีวิวเดิม 3 -->
+        <div class="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+            <div class="space-y-3">
+                <div class="flex items-center gap-1 text-amber-400 text-sm">★ ★ ★ ★ ★</div>
+                <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">"ออกแบบ Custom ออกมาได้ถูกใจมากครับ แก้แบบให้จนกว่าจะชอบแนะนำเลยครับร้านนี้"</p>
+            </div>
+            <span class="text-[11px] text-zinc-500 font-medium">โดย คุณลูกค้า</span>
+        </div>
+    </div>
+</div>
+
+<!-- Script จัดการการส่งรูปภาพ + คอมเมนต์ -->
+<script>
+    async function addComment(event) {
+        event.preventDefault();
+        const nameInput = document.getElementById('commenterName');
+        const textInput = document.getElementById('commentText');
+        const imageInput = document.getElementById('commentImage');
+
+        const name = nameInput.value.trim();
+        const text = textInput.value.trim();
+        const file = imageInput.files[0];
+
+        if (!name || !text) return;
+
+        let imageDataUrl = '';
+        if (file) {
+            imageDataUrl = await convertFileToBase64(file);
         }
 
-        function renderReviewCard(review, isNew = false) {
-            const grid = document.getElementById('reviewsGrid');
-            if (!grid) return;
-            
-            const card = document.createElement('div');
-            card.className = "bg-zinc-900/80 border border-amber-500/40 rounded-2xl p-6 space-y-4 hover:border-amber-500 transition flex flex-col justify-between";
-            
-            card.innerHTML = `
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-1 text-amber-400 text-sm">★ ★ ★ ★ ★</div>
-                        ${isNew ? '<span class="text-[10px] bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded-full font-semibold">ใหม่ล่าสุด</span>' : ''}
-                    </div>
-                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">"${escapeHtml(review.text)}"</p>
-                </div>
-                <span class="text-[11px] text-amber-400/90 font-medium">โดย ${escapeHtml(review.name)}</span>
-            `;
+        const newReview = { name, text, image: imageDataUrl };
+        const savedReviews = JSON.parse(localStorage.getItem('user_reviews') || '[]');
+        savedReviews.unshift(newReview);
+        localStorage.setItem('user_reviews', JSON.stringify(savedReviews));
 
-            grid.prepend(card);
-        }
+        renderReviewCard(newReview, true);
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedReviews = JSON.parse(localStorage.getItem('user_reviews') || '[]');
-            savedReviews.reverse().forEach(review => renderReviewCard(review));
+        nameInput.value = '';
+        textInput.value = '';
+        imageInput.value = '';
+    }
+
+    // ฟังก์ชันแปลงไฟล์รูปภาพเป็น Base64
+    function convertFileToBase64(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = error => reject(error);
         });
+    }
 
-        function escapeHtml(text) {
-            return text.replace(/[&<>"']/g, function(m) {
-                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
-            });
-        }
-    </script>
-        </section>
+    function renderReviewCard(review, isNew = false) {
+        const grid = document.getElementById('reviewsGrid');
+        if (!grid) return;
 
-       <!-- 2. ABOUT SECTION -->
-        <section id="page-about" class="page-section max-w-5xl mx-auto px-4 py-12">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-zinc-100">เกี่ยวกับเรา</h2>
-                <p class="text-amber-500 text-sm font-medium mt-1">71’s Atelier Tattoo Studio</p>
+        const card = document.createElement('div');
+        card.className = "bg-zinc-900/80 border border-amber-500/40 rounded-2xl p-6 space-y-4 flex flex-col justify-between";
+        
+        // เช็กว่ามีรูปภาพแนบมาด้วยหรือไม่
+        const imageHtml = review.image ? `
+            <div class="w-full h-48 rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950 mt-2">
+                <img src="${review.image}" alt="รูปภาพรีวิว" class="w-full h-full object-cover">
             </div>
-            
-            <!-- ข้อมูลร้าน -->
-            <div class="grid md:grid-cols-2 gap-8 items-center bg-zinc-900/60 border border-zinc-800/80 p-6 md:p-8 rounded-2xl mb-12">
-                <div class="space-y-4">
-                    <span class="text-xs font-bold uppercase tracking-widest text-amber-500">Private Tattoo Studio</span>
-                    <h3 class="text-2xl font-bold text-zinc-100">ร้านสักบรรยากาศเป็นกันเอง ย่านคลองหก ปทุมธานี</h3>
-                    <p class="text-zinc-300 text-sm leading-relaxed font-light">
-                        เราคือสตูดิโอสักส่วนตัว ตั้งอยู่ใกล้กับ มทร.ธัญบุรี (คลองหก) มุ่งเน้นสร้างสรรค์ผลงานสักที่มีเอกลักษณ์เฉพาะตัว ไม่ว่าจะเป็นงาน Minimal ลายเส้นบางเบา งานฟอนต์ หรือ Custom Design ตามความต้องการของคุณ
-                    </p>
-                    <div class="pt-2 space-y-2 text-xs text-zinc-400">
-                        <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500"></i> ให้บริการแบบเป็นกันเอง ให้คำปรึกษาฟรีทุกเคส</div>
-                        <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500"></i> สีสักมาตรฐานนำเข้า สีติดชัด ปลอดภัยต่อผิวหนัง</div>
-                        <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500"></i> มีที่จอดรถสะดวกสบาย เดินทางง่ายใกล้ มทร.ธัญบุรี</div>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-amber-700 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
-                    <img src="assets/images/CA00C782-7140-4044-9D04-32867D000041.jpg" alt="โลโก้ร้านสัก 71's Atelier Tattoo" class="relative rounded-xl border border-zinc-800 w-full h-80 object-cover">
-                </div>
-            </div>
+        ` : '';
 
+        card.innerHTML = `
+            <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-1 text-amber-400 text-sm">★ ★ ★ ★ ★</div>
+                    ${isNew ? '<span class="text-[10px] bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded-full font-semibold">ใหม่ล่าสุด</span>' : ''}
+                </div>
+                <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">"${escapeHtml(review.text)}"</p>
+                ${imageHtml}
+            </div>
+            <span class="text-[11px] text-amber-400/90 font-medium">โดย ${escapeHtml(review.name)}</span>
+        `;
+
+        grid.prepend(card);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedReviews = JSON.parse(localStorage.getItem('user_reviews') || '[]');
+        savedReviews.reverse().forEach(review => renderReviewCard(review));
+    });
+
+    function escapeHtml(text) {
+        return text.replace(/[&<>"']/g, function(m) {
+            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+        });
+    }
+</script>
             <!-- โซนบรรยากาศภายในร้าน (9 รูป) อยู่ในเซกชัน "เกี่ยวกับเรา" -->
 <div class="space-y-6">
     <div class="text-center md:text-left">
