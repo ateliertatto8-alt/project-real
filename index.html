@@ -745,7 +745,7 @@ function sendToLine() {
         return;
     }
 
-    // จัดข้อความส่งเข้า LINE (เพิ่มบรรทัดเวลานัดคิว)
+   // จัดข้อความส่งเข้า LINE
     const message = `📌 *รายละเอียดการจองคิวสัก (71's Atelier)*\n` +
                     `--------------------------------\n` +
                     `👤 *ชื่อ-นามสกุล/ชื่อเล่น:* ${fullname}\n` +
@@ -756,21 +756,11 @@ function sendToLine() {
                     `--------------------------------\n` +
                     `ส่งข้อมูลจากเว็บไซต์ 71's Atelier Tattoo`;
 
-    // 1. ลิงก์แบบส่งข้อความเข้า LINE ID พร้อมข้อมูลจองคิว
+    // ลิงก์แบบส่งข้อความเข้า LINE ID พร้อมข้อมูลจองคิว
     const lineUrl = `https://line.me/R/oaMessage/~pjr.9977/?${encodeURIComponent(message)}`;
 
     window.open(lineUrl, '_blank');
 }
-
-    // 1. ลิงก์แบบส่งข้อความเข้า LINE ID พร้อมข้อมูลจองคิว (แนะนำให้ใช้ตัวนี้ เพราะลูกค้ากดส่งข้อมูลหาเราได้ทันที)
-    const lineUrl = `https://line.me/R/oaMessage/~pjr.9977/?${encodeURIComponent(message)}`;
-    
-    // หรือถ้าต้องการใช้ลิงก์แอดเพื่อนตรงๆ ให้สลับมาใช้บรรทัดด้านล่างนี้แทน:
-    // const lineUrl = "https://line.me/ti/p/gWiYcwguby";
-
-    window.open(lineUrl, '_blank');
-}
-</script>
         <!-- 5. CONTACT SECTION -->
 <section id="page-contact" class="page-section hidden py-12 px-4 max-w-5xl mx-auto w-full">
     <div class="text-center mb-10">
