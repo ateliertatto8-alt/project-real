@@ -744,9 +744,12 @@ function sendToLine() {
                     `--------------------------------\n` +
                     `ส่งข้อมูลจากเว็บไซต์ 71's Atelier Tattoo`;
 
-    const lineUrl = "https://line.me/ti/p/~pjr.9977";
-    window.open(lineUrl, '_blank');
-   const lineUrl = "https://line.me/ti/p/gWiYcwguby";
+    // 1. ลิงก์แบบส่งข้อความเข้า LINE ID พร้อมข้อมูลจองคิว (แนะนำให้ใช้ตัวนี้ เพราะลูกค้ากดส่งข้อมูลหาเราได้ทันที)
+    const lineUrl = `https://line.me/R/oaMessage/~pjr.9977/?${encodeURIComponent(message)}`;
+    
+    // หรือถ้าต้องการใช้ลิงก์แอดเพื่อนตรงๆ ให้สลับมาใช้บรรทัดด้านล่างนี้แทน:
+    // const lineUrl = "https://line.me/ti/p/gWiYcwguby";
+
     window.open(lineUrl, '_blank');
 }
 </script>
